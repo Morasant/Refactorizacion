@@ -2,8 +2,11 @@ package es.studium.Refactorizacion;
 
 public class Ejercicio1 {
 	
-	public double calcularPrecioConIva(int unidades, double precioUnitario) {
-		double resultado = unidades*(precioUnitario*1.21);
-		return resultado;
+	final double IVA = 1.21;
+	
+	public double calcularPrecio(int unidades, double precioUnitario) {
+		double precioSinIva = unidades*(precioUnitario);
+		double precioConIva = precioSinIva*IVA;
+		return precioConIva;
 	}
 }
